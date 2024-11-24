@@ -8,3 +8,4 @@ from . import binary_bunnies
 from . import bomb_baby
 from . import hash_it_out
 from . import minion_hierarchy
+from . import re_id
