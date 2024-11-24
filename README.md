@@ -12,4 +12,4 @@ Please join me in my journey as I tackle these challenges. Let me know if you no
 
 ## Completed Challenges
 &emsp;binary bunnies
-&emsp;bomb baby
+<br/>&emsp;bomb baby
