@@ -11,5 +11,7 @@ Please join me in my journey as I tackle these challenges. Let me know if you no
 
 
 ## Completed Challenges
-&emsp;binary bunnies
-<br/>&emsp;bomb baby
+&emsp;Binary Bunnies<br/>
+&emsp;Bomb Baby<br/>
+&emsp;Hash It Out<br/>
+&emsp;Minion Hierarchy<br/>
