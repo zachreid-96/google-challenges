@@ -1,7 +1,7 @@
 import math
 from itertools import permutations
 
-'''
+"""
 Description: Recursively continues the party from brute_force
     recursively checks if passed permutation will give the same output as the passed original order
     this is a 'smart brute force' method, smart because it checks until it fails
@@ -25,7 +25,11 @@ Args:
 Returns:
     True if the entire order is preserved and will result in same tree
     False if the order is not preserved and will not result in same tree
-'''
+Test Cases Used:
+    [5, 9, 8, 2, 1] # Expected output 6
+    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] # Expected output 1
+    [5, 2, 1, 3, 6] # Expected output 8
+"""
 
 
 def brute_force_solve(true_order, perm):
@@ -55,7 +59,7 @@ def brute_force_solve(true_order, perm):
     return False
 
 
-'''
+"""
 Description: Wrapper for brute_force_solve (gets the party started)
     takes the original sequence, finds the tree head and the tree remainder
     finds the tree left && finds the tree right (based on tree_head)
@@ -65,8 +69,16 @@ Description: Wrapper for brute_force_solve (gets the party started)
 Args:
     seq: the passed sequence and will need to find all permutations of said sequence that result in same tree
 Returns:
-    returns the integer of how many permutations result in the same tree formation
-'''
+    returns the string of how many permutations result in the same tree formation
+Test Cases Used:
+    [5, 9, 8, 2, 1] # Expected output 6
+    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] # Expected output 1
+    [5, 2, 1, 3, 6] # Expected output 8
+Test Cases Used:
+    [5, 9, 8, 2, 1] # Expected output 6
+    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] # Expected output 1
+    [5, 2, 1, 3, 6] # Expected output 8
+"""
 
 
 def brute_force(seq):
@@ -88,17 +100,17 @@ def brute_force(seq):
         if brute_force_solve(true_left, left_perm) and brute_force_solve(true_right, right_perm):
             matches_found += 1
 
-    return matches_found
+    return str(matches_found)
 
 
-'''
+"""
 Description: 
     Recursively finds the binomial coefficient for a given set of numbers and multiplies up the tree
 Args:
     seq: the passed set of numbers
 Returns:
     returns the number of permutations that result in the same tree
-'''
+"""
 
 
 def binomial_coefficient(seq):
@@ -114,19 +126,23 @@ def binomial_coefficient(seq):
     left_coefficient = binomial_coefficient(left)
     right_coefficient = binomial_coefficient(right)
 
-    return current_coefficient * left_coefficient * right_coefficient
+    return int(current_coefficient * left_coefficient * right_coefficient)
 
 
-'''
+"""
 Description: 
     wrapper for binomial_coefficient(seq)
     named solution as per the google challenge description in ../text_files/binary_bunnies.txt
 Args:
     seq: the passed set of numbers
 Returns:
-    returns integer value of permutations of seq that will create same tree
-'''
+    returns string value of permutations of seq that will create same tree
+Test Cases Used:
+    [5, 9, 8, 2, 1] # Expected output 6
+    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] # Expected output 1
+    [5, 2, 1, 3, 6] # Expected output 8
+"""
 
 
 def solution(seq):
-    return int(binomial_coefficient(seq))
+    return str(binomial_coefficient(seq))
