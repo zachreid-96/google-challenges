@@ -1,5 +1,5 @@
 """
-Description: see ../text_files/grandest_staircase_of_them_all.txt for descriptoin
+Description: see ../text_files/grandest_staircase_of_them_all.txt for description
     Uses Partition Theory to calculate valid partitions of the bricks
     So stairs = 5, partitioning would find
         1 + 5, 2 + 3, 3 + 2, and 5 + 1 as valid partitions (based on guidelines see above)
